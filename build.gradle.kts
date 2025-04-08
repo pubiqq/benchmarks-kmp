@@ -50,7 +50,16 @@ benchmark {
 
     configurations {
         named("main") {
-            advanced("jvmForks", 3)
+            mode = "thrpt"
+            warmups = 5
+            iterations = 5
+            iterationTime = 1
+            iterationTimeUnit = "ms"
+            outputTimeUnit = "ms"
+            reportFormat = "json"
+            advanced("jvmForks", 2)
+
+            include(".+ListGet.*Benchmarks")
         }
     }
 }
