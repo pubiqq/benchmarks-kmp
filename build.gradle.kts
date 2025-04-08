@@ -54,7 +54,7 @@ benchmark {
             warmups = 5
             iterations = 5
             iterationTime = 1
-            iterationTimeUnit = "ms"
+            iterationTimeUnit = "s"
             outputTimeUnit = "ms"
             reportFormat = "json"
             advanced("jvmForks", 2)
